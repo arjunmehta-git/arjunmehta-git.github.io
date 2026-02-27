@@ -1,277 +1,541 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arjun • Product • Bengaluru</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg: #0f0f0f;
-      --text: #e0e0e0;
-      --text-light: #a0a0a0;
-      --accent: #00d4ff;
-      --accent-dark: #0099bb;
-      --card: #161616;
-      --border: #222;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    header {
-      padding: 120px 0 80px;
-      text-align: center;
-      background: linear-gradient(to bottom, #0f0f0f, #0a0a0a);
-    }
-
-    .avatar {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--accent);
-      margin-bottom: 24px;
-      box-shadow: 0 8px 32px rgba(0,212,255,0.18);
-    }
-
-    h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .tagline {
-      font-size: 1.4rem;
-      color: var(--text-light);
-      margin-bottom: 32px;
-      max-width: 580px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 48px;
-      flex-wrap: wrap;
-    }
-
-    .social-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 24px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.22s ease;
-    }
-
-    .social-btn:hover {
-      background: var(--accent);
-      color: #000;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,212,255,0.25);
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    h2 {
-      font-size: 2.4rem;
-      margin-bottom: 48px;
-      text-align: center;
-      background: linear-gradient(90deg, #00d4ff, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 28px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    }
-
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 12px;
-      color: var(--accent);
-    }
-
-    .card .period {
-      color: var(--text-light);
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .tag {
-      background: rgba(0,212,255,0.12);
-      color: var(--accent);
-      padding: 6px 14px;
-      border-radius: 30px;
-      font-size: 0.82rem;
-      border: 1px solid rgba(0,212,255,0.3);
-    }
-
-    .about-text {
-      max-width: 720px;
-      margin: 0 auto 60px;
-      font-size: 1.15rem;
-      color: var(--text-light);
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 60px 0 100px;
-      color: var(--text-light);
-      font-size: 0.95rem;
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 640px) {
-      header { padding: 80px 0 60px; }
-      h1 { font-size: 2.6rem; }
-      .avatar { width: 120px; height: 120px; }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <div class="container">
-    <!-- Replace with your real photo URL or remove if you don't want a picture -->
-    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80" alt="Arjun" class="avatar">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun Mehta | AI/ML Engineer</title>
     
-    <h1>Arjun</h1>
-    <div class="tagline">
-      Product • Growth • AI-curious human living in Cedar Park, TX
-    </div>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <div class="social-links">
-      <a href="https://linkedin.com/in/YOUR-LINKEDIN-USERNAME" class="social-btn" target="_blank">LinkedIn</a>
-      <a href="https://x.com/YOURHANDLE" class="social-btn" target="_blank">X / Twitter</a>
-      <a href="https://github.com/YOURUSERNAME" class="social-btn" target="_blank">GitHub</a>
-      <a href="mailto:hello@arjun.example.com" class="social-btn">Email</a>
-      <!-- Add more: portfolio, calendly, medium, etc. -->
-    </div>
-  </div>
-</header>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#06b6d4', // Cyan 500
+                        secondary: '#3b82f6', // Blue 500
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #06b6d4, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-300 font-sans antialiased leading-relaxed selection:bg-cyan-900 selection:text-cyan-50">
 
-<section id="about">
-  <div class="container">
-    <h2>About</h2>
-    <p class="about-text">
-      I build products people actually want to use. Currently focused on 
-      <strong>AI-native workflows</strong>, developer tools, and 
-      <em>making complex things feel simple</em>.<br><br>
-      
-      Previously: early growth @ [Company], scaled [Product] to X00k users, 
-      led product at [Another Company].<br><br>
-      
-      Right now I'm most excited about agentic systems, prompt engineering that actually matters, 
-      and figuring out how normal humans can thrive in a world full of increasingly capable models.
-    </p>
-  </div>
-</section>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 border-b border-transparent">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold tracking-tighter text-white">
+                ARJUN<span class="text-primary">.</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="#about" class="text-slate-400 hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="text-slate-400 hover:text-primary transition-colors">Skills</a>
+                <a href="#experience" class="text-slate-400 hover:text-primary transition-colors">Experience</a>
+                <a href="#projects" class="text-slate-400 hover:text-primary transition-colors">Projects</a>
+                <a href="mailto:arjun.mehtacs@gmail.com" class="px-5 py-2.5 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-0.5">
+                    Contact Me
+                </a>
+            </div>
 
-<section id="experience">
-  <div class="container">
-    <h2>Experience</h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3>Product Manager</h3>
-        <span class="period">Company Name  •  2023 – Present</span>
-        <p>Leading product for [core product]. Grew active users 4.2×, launched AI features that became the #1 requested capability.</p>
-        <div class="tags">
-          <span class="tag">Product Strategy</span>
-          <span class="tag">AI Features</span>
-          <span class="tag">Growth</span>
-          <span class="tag">User Research</span>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
-      </div>
 
-      <div class="card">
-        <h3>Senior Product / Growth</h3>
-        <span class="period">Previous Company  •  2020 – 2023</span>
-        <p>Owned onboarding + activation. Reduced time-to-aha moment by 62%. Ran 70+ experiments.</p>
-        <div class="tags">
-          <span class="tag">Experimentation</span>
-          <span class="tag">Funnels</span>
-          <span class="tag">SQL + Mixpanel</span>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 shadow-xl py-4 px-6 flex-col space-y-4">
+            <a href="#about" class="block text-slate-300 hover:text-primary mobile-link">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-primary mobile-link">Skills</a>
+            <a href="#experience" class="block text-slate-300 hover:text-primary mobile-link">Experience</a>
+            <a href="#projects" class="block text-slate-300 hover:text-primary mobile-link">Projects</a>
+            <a href="mailto:arjun.mehtacs@gmail.com" class="block text-primary font-medium mobile-link">Contact Me</a>
         </div>
-      </div>
+    </nav>
 
-      <div class="card">
-        <h3>Earlier roles & side projects</h3>
-        <span class="period">2016 – 2020</span>
-        <p>Startup co-founder • mobile dev • indie hacker • failed beautifully a few times</p>
-        <div class="tags">
-          <span class="tag">Founding</span>
-          <span class="tag">React Native</span>
-          <span class="tag">Node.js</span>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 pb-12 px-6 md:px-12 relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-sm text-cyan-400 mb-8">
+                <i class="fas fa-code"></i>
+                <span>Computer Science Student @ IIT Delhi</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+                Hi, I'm <span class="gradient-text">Arjun Mehta</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Driven AI/ML enthusiast focused on building scalable machine learning systems and contributing to open source AI frameworks. 
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12 flex-wrap">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 bg-white text-slate-900 font-semibold rounded-full hover:bg-slate-200 transition-colors">
+                    View My Work
+                </a>
+                <a href="https://github.com/arjunmehta-git" target="_blank" class="w-full sm:w-auto px-8 py-3.5 bg-slate-800 text-white font-semibold rounded-full border border-slate-700 hover:bg-slate-700 hover:border-slate-600 transition-colors flex items-center justify-center space-x-2">
+                    <i class="fab fa-github text-lg"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://x.com/ArjunMehtaCS" target="_blank" class="w-full sm:w-auto px-8 py-3.5 bg-slate-800 text-white font-semibold rounded-full border border-slate-700 hover:bg-slate-700 hover:border-slate-600 transition-colors flex items-center justify-center space-x-2">
+                    <i class="fab fa-x-twitter text-lg"></i>
+                    <span>@ArjunMehtaCS</span>
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/arjunmehta-git" target="_blank" class="text-slate-500 hover:text-white transition-colors text-2xl"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/arjun-mehta-9725b0383/" target="_blank" class="text-slate-500 hover:text-[#0a66c2] transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/ArjunMehtaCS" target="_blank" class="text-slate-500 hover:text-white transition-colors text-2xl"><i class="fab fa-x-twitter"></i></a>
+                <a href="mailto:arjun.mehtacs@gmail.com" class="text-slate-500 hover:text-red-400 transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
+                <a href="https://arjunmehta-git.github.io" target="_blank" class="text-slate-500 hover:text-primary transition-colors text-2xl"><i class="fas fa-globe"></i></a>
+            </div>
         </div>
-      </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- About & Education Section -->
+    <section id="about" class="py-20 px-6 md:px-12 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-16">
+                
+                <!-- Objective -->
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                        <i class="fas fa-user text-primary mr-3 text-2xl"></i> About Me
+                    </h2>
+                    <p class="text-slate-400 leading-relaxed mb-6 text-lg">
+                        I am a driven and innovative computer science student at IIT Delhi with a strong passion for artificial intelligence, machine learning, and open source AI frameworks. 
+                    </p>
+                    <p class="text-slate-400 leading-relaxed text-lg">
+                        Experienced in contributing to AI-driven open source projects and developing scalable ML systems. I am eager to leverage my technical expertise and collaborative spirit in impactful roles focused on AI research, deployment, and optimization.
+                    </p>
+                </div>
 
-<footer>
-  <div class="container">
-    <p>Currently based in Cedar Park, Texas • Open to interesting opportunities & good conversations</p>
-    <p style="margin-top:24px;">Made with ☕ & dark mode • 2026</p>
-  </div>
-</footer>
+                <!-- Education -->
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                        <i class="fas fa-graduation-cap text-secondary mr-3 text-2xl"></i> Education
+                    </h2>
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-slate-600 transition-colors">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white">Indian Institute of Technology (IIT) Delhi</h3>
+                            <span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">May 2026</span>
+                        </div>
+                        <p class="text-slate-300 font-medium mb-4">B.Tech in Computer Science and Engineering</p>
+                        
+                        <div class="flex items-center space-x-2 mb-6">
+                            <i class="fas fa-star text-yellow-500 text-sm"></i>
+                            <span class="text-slate-300 font-semibold">CGPA: 9.3 / 10</span>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Relevant Coursework</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-900 text-slate-400 text-xs rounded-md border border-slate-800">Machine Learning</span>
+                                <span class="px-3 py-1 bg-slate-900 text-slate-400 text-xs rounded-md border border-slate-800">Deep Learning</span>
+                                <span class="px-3 py-1 bg-slate-900 text-slate-400 text-xs rounded-md border border-slate-800">NLP</span>
+                                <span class="px-3 py-1 bg-slate-900 text-slate-400 text-xs rounded-md border border-slate-800">Computer Vision</span>
+                                <span class="px-3 py-1 bg-slate-900 text-slate-400 text-xs rounded-md border border-slate-800">DSA</span>
+                                <span class="px-3 py-1 bg-slate-900 text-slate-400 text-xs rounded-md border border-slate-800">Operating Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center justify-center">
+                <i class="fas fa-microchip text-primary mr-3 text-2xl"></i> Technical Skills
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Languages -->
+                <div class="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+                        <i class="fas fa-code text-cyan-400 w-6"></i> Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Python</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">C++</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Java</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">R</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+                        <i class="fas fa-cubes text-blue-400 w-6"></i> AI/ML Frameworks
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">TensorFlow</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">PyTorch</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Scikit-learn</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">HF Transformers</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+                        <i class="fas fa-cloud text-purple-400 w-6"></i> Cloud & DevOps
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">AWS (SageMaker)</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Azure ML</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">GCP</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Docker</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Kubeflow</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">MLflow</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+                        <i class="fas fa-database text-green-400 w-6"></i> Databases
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Pinecone (Vector)</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">MongoDB</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300 md:col-span-2 lg:col-span-2">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+                        <i class="fas fa-toolbox text-orange-400 w-6"></i> Other Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Git / GitHub / GitLab</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">LangChain</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">ONNX</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">REST APIs</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Linux (Ubuntu)</span>
+                        <span class="px-3 py-1.5 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700">Jupyter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 md:px-12 bg-slate-900/50 relative">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <i class="fas fa-briefcase text-secondary mr-3 text-2xl"></i> Experience
+            </h2>
+
+            <!-- Timeline Container -->
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+                
+                <!-- Microsoft Intern -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-secondary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fab fa-microsoft text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800/50 border border-slate-700 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-secondary/50">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Machine Learning Intern</h3>
+                                <p class="text-primary font-medium">Microsoft India (Azure AI Team)</p>
+                            </div>
+                            <span class="text-sm text-slate-400 mt-2 sm:mt-0 font-medium bg-slate-900/50 px-3 py-1 rounded-full border border-slate-800">May 2024 - Jul 2024</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2 text-xs"></i> Developed enhancements for Azure ML pipelines focusing on automated hyperparameter tuning.</li>
+                            <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2 text-xs"></i> Built custom dashboards for visualizing model performance metrics via Azure Monitor.</li>
+                            <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2 text-xs"></i> Optimized LLMs for low-latency inference on Azure Kubernetes Service with global teams.</li>
+                            <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-2 text-xs"></i> Conducted a workshop on "Deploying Scalable ML Models with Azure" internally.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Open Source Contributor -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-code-branch text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800/50 border border-slate-700 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-primary/50">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Open Source Contributor</h3>
+                                <p class="text-primary font-medium">Hugging Face & PyTorch</p>
+                            </div>
+                            <span class="text-sm text-slate-400 mt-2 sm:mt-0 font-medium bg-slate-900/50 px-3 py-1 rounded-full border border-slate-800">Sep 2023 - Present</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li class="flex items-start"><i class="fas fa-check text-primary mt-1 mr-2 text-xs"></i> Submitted 8+ PRs to Hugging Face Transformers, enhancing LLM optimization.</li>
+                            <li class="flex items-start"><i class="fas fa-check text-primary mt-1 mr-2 text-xs"></i> Improved PyTorch documentation for distributed training.</li>
+                            <li class="flex items-start"><i class="fas fa-check text-primary mt-1 mr-2 text-xs"></i> Developed fine-tuning scripts for LLMs shared with community (150+ GitHub stars).</li>
+                            <li class="flex items-start"><i class="fas fa-check text-primary mt-1 mr-2 text-xs"></i> Collaborated on ONNX runtime optimizations for faster edge inference.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <i class="fas fa-folder-open text-primary mr-3 text-2xl"></i> Featured Projects
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Sentiment Analysis -->
+                <div class="bg-slate-800/40 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800/60 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="bg-blue-500/10 p-3 rounded-xl border border-blue-500/20 text-blue-400">
+                            <i class="fas fa-brain text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-700">Academic Project</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">AI-Powered Sentiment Analysis</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                        Designed and deployed a scalable sentiment analysis system using BERT-based models. Achieved 95% accuracy on social media datasets.
+                    </p>
+                    <ul class="space-y-2 mb-8 text-sm text-slate-300">
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-slate-500 mt-1 mr-2 text-xs"></i> Deployed on AWS SageMaker</li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-slate-500 mt-1 mr-2 text-xs"></i> Microservices architecture with Docker & K8s</li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-slate-500 mt-1 mr-2 text-xs"></i> MLflow for experiment tracking</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-medium text-cyan-300 bg-cyan-900/30 px-2 py-1 rounded">BERT</span>
+                        <span class="text-xs font-medium text-cyan-300 bg-cyan-900/30 px-2 py-1 rounded">AWS</span>
+                        <span class="text-xs font-medium text-cyan-300 bg-cyan-900/30 px-2 py-1 rounded">Kubernetes</span>
+                    </div>
+                </div>
+
+                <!-- Object Detection -->
+                <div class="bg-slate-800/40 border border-slate-700 rounded-2xl p-8 hover:bg-slate-800/60 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="bg-cyan-500/10 p-3 rounded-xl border border-cyan-500/20 text-cyan-400">
+                            <i class="fas fa-camera text-2xl"></i>
+                        </div>
+                        <div class="flex space-x-2 border border-slate-700 bg-slate-900 rounded-full px-3 py-1 items-center">
+                            <i class="fab fa-github text-slate-400 text-xs"></i>
+                            <span class="text-xs font-semibold text-slate-400">100+ Stars</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Real-Time Object Detection</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                        Built a real-time system using YOLOv8 and deployed it on Google Cloud Run. Integrated Pinecone for efficient contextual object vector search.
+                    </p>
+                    <ul class="space-y-2 mb-8 text-sm text-slate-300">
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-slate-500 mt-1 mr-2 text-xs"></i> Deployed on Google Cloud Run</li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-slate-500 mt-1 mr-2 text-xs"></i> Automated pipelines with GitHub Actions & Kubeflow</li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-slate-500 mt-1 mr-2 text-xs"></i> Adopted by IIT Delhi AI Club for workshops</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-medium text-blue-300 bg-blue-900/30 px-2 py-1 rounded">YOLOv8</span>
+                        <span class="text-xs font-medium text-blue-300 bg-blue-900/30 px-2 py-1 rounded">GCP</span>
+                        <span class="text-xs font-medium text-blue-300 bg-blue-900/30 px-2 py-1 rounded">Pinecone</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Extracurriculars -->
+    <section class="py-20 px-6 md:px-12 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Achievements -->
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-8 flex items-center border-b border-slate-700 pb-4">
+                        <i class="fas fa-trophy text-yellow-500 mr-3"></i> Achievements
+                    </h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-4 bg-slate-800 p-2 rounded-lg text-yellow-500 border border-slate-700">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Google Summer of Code 2024</h4>
+                                <p class="text-sm text-slate-400 mt-1">Contributor with PyTorch (Distributed Training Enhancements).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-4 bg-slate-800 p-2 rounded-lg text-primary border border-slate-700">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">1st Place, IIT Delhi AI Hackathon 2024</h4>
+                                <p class="text-sm text-slate-400 mt-1">Developed an AI-powered chatbot for educational content delivery.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-4 bg-slate-800 p-2 rounded-lg text-secondary border border-slate-700">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">IIT Delhi Merit Scholarship</h4>
+                                <p class="text-sm text-slate-400 mt-1">Awarded in consecutive years (2023, 2024) for academic excellence.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Extracurriculars -->
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-8 flex items-center border-b border-slate-700 pb-4">
+                        <i class="fas fa-users text-blue-400 mr-3"></i> Extracurriculars
+                    </h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-4 bg-slate-800 p-2 rounded-lg text-blue-400 border border-slate-700">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Lead Organizer, IIT Delhi AI Club</h4>
+                                <p class="text-sm text-slate-400 mt-1">Organized 2 hackathons and mentored 30+ students in AI/ML projects.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-4 bg-slate-800 p-2 rounded-lg text-purple-400 border border-slate-700">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Speaker, AI Community Days 2025</h4>
+                                <p class="text-sm text-slate-400 mt-1">Presented on "Optimizing Large Language Models for Edge Devices."</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-4 bg-slate-800 p-2 rounded-lg text-green-400 border border-slate-700">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Mentor, GirlCodeIt Summer 2024</h4>
+                                <p class="text-sm text-slate-400 mt-1">Guided students on building AI apps and contributing to open source.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-800 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-bold text-white mb-6">ARJUN<span class="text-primary">.</span></h2>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://github.com/arjunmehta-git" target="_blank" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-600 transition-all"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/arjun-mehta-9725b0383/" target="_blank" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-[#0a66c2] hover:border-[#0a66c2]/50 transition-all"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/ArjunMehtaCS" target="_blank" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-600 transition-all"><i class="fab fa-x-twitter"></i></a>
+                <a href="mailto:arjun.mehtacs@gmail.com" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-red-400 hover:border-red-400/50 transition-all"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="year"></span> Arjun Mehta. All rights reserved.
+            </p>
+            <p class="text-slate-600 text-xs mt-2">
+                References available upon request.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Vanilla JS Logic -->
+    <script>
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav', 'border-slate-800', 'py-4');
+                navbar.classList.remove('py-6', 'border-transparent');
+            } else {
+                navbar.classList.remove('glass-nav', 'border-slate-800', 'py-4');
+                navbar.classList.add('py-6', 'border-transparent');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const icon = menuBtn.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
 </body>
 </html>
