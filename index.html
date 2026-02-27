@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arjun • Product • Bengaluru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --text: #e0e0e0;
+      --text-light: #a0a0a0;
+      --accent: #00d4ff;
+      --accent-dark: #0099bb;
+      --card: #161616;
+      --border: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 120px 0 80px;
+      text-align: center;
+      background: linear-gradient(to bottom, #0f0f0f, #0a0a0a);
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0,212,255,0.18);
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      font-size: 1.4rem;
+      color: var(--text-light);
+      margin-bottom: 32px;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.22s ease;
+    }
+
+    .social-btn:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,212,255,0.25);
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 48px;
+      text-align: center;
+      background: linear-gradient(90deg, #00d4ff, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .card .period {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      background: rgba(0,212,255,0.12);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      border: 1px solid rgba(0,212,255,0.3);
+    }
+
+    .about-text {
+      max-width: 720px;
+      margin: 0 auto 60px;
+      font-size: 1.15rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 0 100px;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 80px 0 60px; }
+      h1 { font-size: 2.6rem; }
+      .avatar { width: 120px; height: 120px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <!-- Replace with your real photo URL or remove if you don't want a picture -->
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80" alt="Arjun" class="avatar">
+    
+    <h1>Arjun</h1>
+    <div class="tagline">
+      Product • Growth • AI-curious human living in Cedar Park, TX
+    </div>
+
+    <div class="social-links">
+      <a href="https://linkedin.com/in/YOUR-LINKEDIN-USERNAME" class="social-btn" target="_blank">LinkedIn</a>
+      <a href="https://x.com/YOURHANDLE" class="social-btn" target="_blank">X / Twitter</a>
+      <a href="https://github.com/YOURUSERNAME" class="social-btn" target="_blank">GitHub</a>
+      <a href="mailto:hello@arjun.example.com" class="social-btn">Email</a>
+      <!-- Add more: portfolio, calendly, medium, etc. -->
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <h2>About</h2>
+    <p class="about-text">
+      I build products people actually want to use. Currently focused on 
+      <strong>AI-native workflows</strong>, developer tools, and 
+      <em>making complex things feel simple</em>.<br><br>
+      
+      Previously: early growth @ [Company], scaled [Product] to X00k users, 
+      led product at [Another Company].<br><br>
+      
+      Right now I'm most excited about agentic systems, prompt engineering that actually matters, 
+      and figuring out how normal humans can thrive in a world full of increasingly capable models.
+    </p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Product Manager</h3>
+        <span class="period">Company Name  •  2023 – Present</span>
+        <p>Leading product for [core product]. Grew active users 4.2×, launched AI features that became the #1 requested capability.</p>
+        <div class="tags">
+          <span class="tag">Product Strategy</span>
+          <span class="tag">AI Features</span>
+          <span class="tag">Growth</span>
+          <span class="tag">User Research</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Senior Product / Growth</h3>
+        <span class="period">Previous Company  •  2020 – 2023</span>
+        <p>Owned onboarding + activation. Reduced time-to-aha moment by 62%. Ran 70+ experiments.</p>
+        <div class="tags">
+          <span class="tag">Experimentation</span>
+          <span class="tag">Funnels</span>
+          <span class="tag">SQL + Mixpanel</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Earlier roles & side projects</h3>
+        <span class="period">2016 – 2020</span>
+        <p>Startup co-founder • mobile dev • indie hacker • failed beautifully a few times</p>
+        <div class="tags">
+          <span class="tag">Founding</span>
+          <span class="tag">React Native</span>
+          <span class="tag">Node.js</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Currently based in Cedar Park, Texas • Open to interesting opportunities & good conversations</p>
+    <p style="margin-top:24px;">Made with ☕ & dark mode • 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
